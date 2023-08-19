@@ -97,7 +97,7 @@ int write_num(int idx, char buffer[],
 {
 	int i, padd_start = 1;
 
-	if (prec == 0 && ind == BUFF_SIZE - 2 && buffer[idx] == '0' && width == 0)
+	if (prec == 0 && idx == BUFF_SIZE - 2 && buffer[idx] == '0' && width == 0)
 		return (0); /* printf(".0d", 0)  no char is printed */
 	if (prec == 0 && idx == BUFF_SIZE - 2 && buffer[idx] == '0')
 		buffer[idx] = padd = ' '; /* width is displayed with padding ' ' */
@@ -160,7 +160,7 @@ int write_unsgnd(int is_negative, int idx,
 	UNUSED(is_negative);
 	UNUSED(size);
 
-	if (precision == 0 && ind == BUFF_SIZE - 2 && buffer[ind] == '0')
+	if (precision == 0 && idx == BUFF_SIZE - 2 && buffer[idx] == '0')
 		return (0); /* printf(".0d", 0)  no char is printed */
 
 	if (precision > 0 && precision < length)

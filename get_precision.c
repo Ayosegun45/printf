@@ -18,12 +18,12 @@ int get_precision(const char *format, int *i, va_list valist)
 
 	precision = 0;
 
-	for (c_i += 1; format[curr_i] != '\0'; c_i++)
+	for (c_i += 1; format[c_i] != '\0'; c_i++)
 	{
 		if (is_digit(format[c_i]))
 		{
 			precision *= 10;
-			precision += format[_i] - '0';
+			precision += format[c_i] - '0';
 		}
 		else if (format[c_i] == '*')
 		{
